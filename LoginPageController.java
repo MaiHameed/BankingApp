@@ -1,11 +1,8 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
@@ -40,10 +37,15 @@ public class LoginPageController {
             return;
         }
 
+        //Check if Manager login > Leads to Manager page
         if(usernameTextField.getText().toLowerCase().equals("admin")){
             if(passwordTextField.getText().toLowerCase().equals("admin")) {
                 VistaNavigator.loadVista(VistaNavigator.MANAGER_PAGE);
             }else{
+                /*TODO
+                Add an if statement to check for the existence of the username
+                Cross reference password w file password.
+                 */
                 AlertHelper.showAlert(Alert.AlertType.ERROR, owner, "Login Error", "Invalid username or password");
             }
         }

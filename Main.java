@@ -13,7 +13,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception{
-        stage.setTitle("Vista Viewer");
+        stage.setTitle("Banking App");
 
         stage.setScene(
             createScene(

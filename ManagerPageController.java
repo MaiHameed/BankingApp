@@ -1,34 +1,27 @@
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
-import javafx.stage.Window;
 
-import java.io.IOException;
-
+/**
+ * Controller class for the first vista.
+ */
 public class ManagerPageController {
 
     @FXML
-    private Button logoutButton;
-
-    Window owner = logoutButton.getScene().getWindow();
-
-    @FXML
-    protected void handleAddCustomerButton(ActionEvent actionEvent) {
+    public void handleAddCustomerButton(ActionEvent actionEvent) {
+        VistaNavigator.loadVista(VistaNavigator.ADD_CUSTOMER);
     }
 
     @FXML
-    protected void handleDeleteCustomerButton(ActionEvent actionEvent) {
+    public void handleDeleteCustomerButton(ActionEvent actionEvent) {
+        /* TODO
+        New page where you put in the customer username
+        if exists, delete
+        if not, error box
+         */
     }
 
     @FXML
-    protected void handleLogoutButton(ActionEvent actionEvent) {
-
+    public void handleLogoutButton(ActionEvent actionEvent) {
+        VistaNavigator.loadVista(VistaNavigator.LOGIN_PAGE);
     }
 }

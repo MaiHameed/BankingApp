@@ -14,8 +14,9 @@ public class VistaNavigator {
      * Convenience constants for fxml layouts managed by the navigator.
      */
     public static final String MAIN    = "main.fxml";
-    public static final String LOGIN_PAGE = "LoginPage.fxml";
+    public static final String LOGIN_PAGE = "AddCustomer.fxml";
     public static final String MANAGER_PAGE = "ManagerPage.fxml";
+    public static final String ADD_CUSTOMER = "AddCustomer.fxml";
 
     /** The main application layout controller. */
     private static MainController mainController;
