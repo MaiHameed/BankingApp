@@ -13,11 +13,7 @@ public class ManagerPageController {
 
     @FXML
     public void handleDeleteCustomerButton(ActionEvent actionEvent) {
-        /* TODO
-        New page where you put in the customer username
-        if exists, delete
-        if not, error box
-         */
+        VistaNavigator.loadVista(VistaNavigator.DELETE_CUSTOMER);
     }
 
     @FXML
