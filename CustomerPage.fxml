@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="CustomerPageController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <padding><Insets top="40" right="40" bottom="40" left="40"/></padding>
+    <columnConstraints>
+        <ColumnConstraints minWidth="100" prefWidth="100"
+                           maxWidth="Infinity" halignment="RIGHT">
+        </ColumnConstraints>
+        <ColumnConstraints minWidth="200" prefWidth="200"
+                           maxWidth="Infinity" hgrow="ALWAYS">
+        </ColumnConstraints>
+    </columnConstraints>
+
+    <!-- Header Label -->
+    <Label text="Welcome!"
+           fx:id="header"
+           GridPane.columnIndex="0"
+           GridPane.rowIndex="0"
+           GridPane.columnSpan="2"
+           GridPane.rowSpan="1"
+           GridPane.halignment="CENTER">
+        <font>
+            <Font name="Arial" size="24"/>
+        </font>
+        <GridPane.margin>
+            <Insets top="20" right="0" bottom="20" left="0"></Insets>
+        </GridPane.margin>
+    </Label>
+
+    <!-- Header Label -->
+    <Label text=" "
+           fx:id="balanceLabel"
+           GridPane.columnIndex="0"
+           GridPane.rowIndex="1"
+           GridPane.columnSpan="2"
+           GridPane.rowSpan="1"
+           GridPane.halignment="CENTER">
+        <font>
+            <Font name="Arial" size="18"/>
+        </font>
+        <GridPane.margin>
+            <Insets top="20" right="0" bottom="20" left="0"></Insets>
+        </GridPane.margin>
+    </Label>
+
+    <!-- Withdraw Money -->
+    <Button fx:id="withdrawButton" text="Withdraw Money"
+            prefWidth="300" prefHeight="40" defaultButton="true"
+            GridPane.columnIndex="0" GridPane.rowIndex="2"
+            GridPane.columnSpan="2" GridPane.rowSpan="1"
+            GridPane.halignment="CENTER"
+            onAction="#handleWithdrawButton">
+        <GridPane.margin>
+            <Insets top="10" right="0" bottom="10" left="0"></Insets>
+        </GridPane.margin>
+    </Button>
+
+    <!-- Deposit Money -->
+    <Button fx:id="depositButton" text="Deposit Money"
+            prefWidth="300" prefHeight="40" defaultButton="true"
+            GridPane.columnIndex="0" GridPane.rowIndex="3"
+            GridPane.columnSpan="2" GridPane.rowSpan="1"
+            GridPane.halignment="CENTER"
+            onAction="#handleDepositButton">
+        <GridPane.margin>
+            <Insets top="10" right="0" bottom="10" left="0"></Insets>
+        </GridPane.margin>
+    </Button>
+
+    <!-- Make a Purchase -->
+    <Button fx:id="purchaceButton" text="Make a Purchase"
+            prefWidth="300" prefHeight="40" defaultButton="true"
+            GridPane.columnIndex="0" GridPane.rowIndex="4"
+            GridPane.columnSpan="2" GridPane.rowSpan="1"
+            GridPane.halignment="CENTER"
+            onAction="#handlePurchaseButton">
+        <GridPane.margin>
+            <Insets top="10" right="0" bottom="10" left="0"></Insets>
+        </GridPane.margin>
+    </Button>
+
+    <!-- Add Logout Button -->
+    <Button fx:id="logoutButton" text="Logout"
+            prefWidth="300" prefHeight="40" defaultButton="true"
+            GridPane.columnIndex="0" GridPane.rowIndex="5"
+            GridPane.columnSpan="2" GridPane.rowSpan="1"
+            GridPane.halignment="CENTER"
+            onAction="#handleLogoutButton">
+        <GridPane.margin>
+            <Insets top="10" right="0" bottom="10" left="0"></Insets>
+        </GridPane.margin>
+    </Button>
+
+</GridPane>

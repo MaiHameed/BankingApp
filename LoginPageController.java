@@ -6,6 +6,9 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 
 /**
@@ -19,6 +22,10 @@ public class LoginPageController {
     private TextField usernameTextField;
     @FXML
     private Button submitButton;
+
+    public LoginPageController(){
+
+    }
 
     @FXML
     protected void handleSubmitButton(ActionEvent actionEvent) throws IOException {
@@ -37,17 +44,34 @@ public class LoginPageController {
             return;
         }
 
+        //Takes the username and creates a path to the <username>.txt file in the /data/ folder
+        //The actual existence of this abstract file is checked in the if statement below
+        String username = new String(usernameTextField.getText().toLowerCase());
+        String fileName = username + ".txt";
+        File parentDir = new File("data");
+        File file = new File(parentDir, fileName);
+
         //Check if Manager login > Leads to Manager page
         if(usernameTextField.getText().toLowerCase().equals("admin")){
             if(passwordTextField.getText().toLowerCase().equals("admin")) {
                 VistaNavigator.loadVista(VistaNavigator.MANAGER_PAGE);
             }else{
-                /*TODO
-                Add an if statement to check for the existence of the username
-                Cross reference password w file password.
-                 */
                 AlertHelper.showAlert(Alert.AlertType.ERROR, owner, "Login Error", "Invalid username or password");
             }
+        }else if(file.exists() && !file.isDirectory()){
+            //Customer exists, check if password is correct
+            BufferedReader reader = new BufferedReader( new FileReader(file));
+            String password = reader.readLine();
+            if(password.equals(passwordTextField.getText())){
+                CustomerPageController.setCustomer(new Customer(file,username));
+                VistaNavigator.loadVista(VistaNavigator.CUSTOMER_PAGE);
+                return;
+            }else{
+                AlertHelper.showAlert(Alert.AlertType.ERROR, owner, "Login Error", "Invalid username or password");
+                return;
+            }
+        }else{
+            AlertHelper.showAlert(Alert.AlertType.ERROR, owner, "Login Error", "Invalid username or password");
         }
     }
 }

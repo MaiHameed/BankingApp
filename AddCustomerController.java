@@ -53,7 +53,9 @@ public class AddCustomerController {
                 PrintWriter writer = new PrintWriter(file, "UTF-8");
                 writer.println(passwordTextField.getText()); //First line will be password
                 writer.println(100.00); //Second line initial balance
+                writer.println("silver"); //Third line initial tier
                 writer.close();
+                new Customer(file, username);
             }catch(Exception e){
                 System.out.print(e);
             }
