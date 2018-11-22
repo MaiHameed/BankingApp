@@ -22,11 +22,11 @@ public class LoginPageController {
     private TextField usernameTextField;
     @FXML
     private Button submitButton;
-
+/*
     public LoginPageController(){
 
     }
-
+*/
     @FXML
     protected void handleSubmitButton(ActionEvent actionEvent) throws IOException {
         Window owner = submitButton.getScene().getWindow();

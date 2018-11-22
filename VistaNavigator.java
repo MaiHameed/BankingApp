@@ -19,6 +19,7 @@ public class VistaNavigator {
     public static final String ADD_CUSTOMER = "AddCustomer.fxml";
     public static final String DELETE_CUSTOMER = "DeleteCustomer.fxml";
     public static final String CUSTOMER_PAGE = "CustomerPage.fxml";
+    public static final String WITHDRAW_PAGE = "WithdrawPage.fxml";
 
     /** The main application layout controller. */
     private static MainController mainController;

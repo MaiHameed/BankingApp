@@ -55,7 +55,7 @@ public class AddCustomerController {
                 writer.println(100.00); //Second line initial balance
                 writer.println("silver"); //Third line initial tier
                 writer.close();
-                new Customer(file, username);
+                //new Customer(file, username);
             }catch(Exception e){
                 System.out.print(e);
             }

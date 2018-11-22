@@ -17,4 +17,8 @@ public class Silver extends Tier {
         return fee;
     }
 
+    @Override
+    public String toString(){
+        return "Silver";
+    }
 }

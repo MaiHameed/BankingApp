@@ -17,4 +17,8 @@ public class Gold extends Tier {
         return fee;
     }
 
+    @Override
+    public String toString(){
+        return "Gold";
+    }
 }

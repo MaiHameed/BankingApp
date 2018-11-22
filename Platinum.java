@@ -16,4 +16,9 @@ public class Platinum extends Tier {
     public int getFee(){
         return fee;
     }
+
+    @Override
+    public String toString(){
+        return "Platinum";
+    }
 }

@@ -37,7 +37,7 @@
         </GridPane.margin>
     </Label>
 
-    <!-- Header Label -->
+    <!-- Balance Label -->
     <Label text=" "
            fx:id="balanceLabel"
            GridPane.columnIndex="0"
