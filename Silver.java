@@ -1,5 +1,11 @@
+/**
+ * The Silver.java class is responsible for providing the fee associated with being a Silver member,
+ * through the getFee() method.
+ * The class is immutable because the only field that exists is the fee field which is a constant.
+ */
+
 public class Silver extends Tier {
-    public int fee = 20;
+    private final int fee = 20;
 
     @Override
     public void changeTier(Customer c){
@@ -13,6 +19,7 @@ public class Silver extends Tier {
         }
     }
 
+    @Override
     public int getFee(){
         return fee;
     }

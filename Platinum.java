@@ -1,5 +1,5 @@
 public class Platinum extends Tier {
-    public int fee = 0;
+    private final int fee = 0;
 
     @Override
     public void changeTier(Customer c){
@@ -13,6 +13,7 @@ public class Platinum extends Tier {
         }
     }
 
+    @Override
     public int getFee(){
         return fee;
     }

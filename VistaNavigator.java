@@ -1,5 +1,4 @@
 import javafx.fxml.FXMLLoader;
-
 import java.io.IOException;
 
 /**
@@ -20,6 +19,8 @@ public class VistaNavigator {
     public static final String DELETE_CUSTOMER = "DeleteCustomer.fxml";
     public static final String CUSTOMER_PAGE = "CustomerPage.fxml";
     public static final String WITHDRAW_PAGE = "WithdrawPage.fxml";
+    public static final String DEPOSIT_PAGE = "DepositPage.fxml";
+    public static final String PURCHASE_PAGE = "PurchasePage.fxml";
 
     /** The main application layout controller. */
     private static MainController mainController;
